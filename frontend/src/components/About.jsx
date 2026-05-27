@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { TerminalSquare, Server, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +18,7 @@ const About = () => {
 
       cardsRef.current.forEach((card, index) => {
         gsap.fromTo(card,
-          { opacity: 0, y: 100 },
+          { opacity: 0, y: 50 },
           { opacity: 1, y: 0, duration: 1, delay: index * 0.2, scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' } }
         );
       });
@@ -38,13 +38,13 @@ const About = () => {
         <span className="text-neon-blue">01.</span> About Me
       </h2>
       
-      <div className="grid-2">
+      <div className="grid-2" style={{ alignItems: 'center' }}>
         <div className="about-content" ref={addToRefs}>
           <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
-            Hello! My name is <strong className="text-neon-green">Akshat Dave</strong>, a B.Tech IT student profoundly passionate about bridging the gap between <strong className="text-primary">Web Development</strong> and <strong className="text-primary">Cybersecurity</strong>. 
+            Hello! My name is <strong className="text-neon-green">Akshat Dave</strong>, a B.Tech IT student profoundly passionate about <strong className="text-primary">Cybersecurity</strong> and <strong className="text-primary">Ethical Hacking</strong>. 
           </p>
           <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
-            I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to build secure, robust applications that provide exceptional digital experiences while adhering to modern aesthetic standards.
+            I focus on identifying system vulnerabilities, securing network infrastructures, and applying offensive and defensive security strategies to protect digital assets. My goal is to analyze, build, and secure environments against sophisticated cyber threats.
           </p>
           <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
             My mindset revolves around a hacker's perspective—understanding how systems are built to know exactly how they can be broken, and ultimately fortified.
@@ -52,25 +52,13 @@ const About = () => {
         </div>
 
         <div className="about-cards" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div className="glass-panel" ref={addToRefs} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-            <TerminalSquare color="var(--accent-neon-blue)" size={32} />
+          <div className="glass-panel" ref={addToRefs} style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', padding: '2.5rem 2rem' }}>
+            <ShieldCheck color="var(--accent-neon-green)" size={48} style={{ flexShrink: 0 }} />
             <div>
-              <h3 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Frontend Engineering</h3>
-              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>Building responsive, pixel-perfect interfaces with React, GSAP, and advanced CSS techniques.</p>
-            </div>
-          </div>
-          <div className="glass-panel" ref={addToRefs} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-            <ShieldCheck color="var(--accent-neon-green)" size={32} />
-            <div>
-              <h3 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Cybersecurity Mindset</h3>
-              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>Focus on Vulnerability Assessment, Network Security, and Ethical Hacking principles.</p>
-            </div>
-          </div>
-          <div className="glass-panel" ref={addToRefs} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-            <Server color="var(--accent-neon-blue)" size={32} />
-            <div>
-              <h3 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Backend Structures</h3>
-              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>Architecting solid scalable APIs with Node.js, Express, and Database Systems.</p>
+              <h3 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)', fontSize: '1.4rem' }}>Cybersecurity Role</h3>
+              <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                Vulnerability Assessment, Network Security, Penetration Testing, and Ethical Hacking principles to build secure cyber environments.
+              </p>
             </div>
           </div>
         </div>
