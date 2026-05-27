@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <section id="home" className="section container" ref={containerRef} style={{ justifyContent: 'center', minHeight: '100vh', paddingTop: '100px' }}>
       <div className="hero-content" style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-        <h1 style={{ fontSize: '4.5rem', margin: 0, lineHeight: 1.1 }}>
+        <h1 className="hero-title">
           I'm <span className="hero-title-name text-neon-blue">Akshat Dave</span>
         </h1>
         <h2 className="text-mono" style={{ fontSize: '1.5rem', color: 'var(--text-secondary)', height: '2rem' }}>
@@ -47,7 +47,7 @@ const Hero = () => {
           Securing systems, analyzing vulnerabilities, and implementing robust security frameworks with a hacker's mindset and an analyst's precision.
         </p>
 
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '2rem' }}>
           <a href="https://github.com/Akshat-Dave20" target="_blank" rel="noreferrer" className="btn btn-primary hero-action">
             View Projects <ArrowRight size={18} />
           </a>
