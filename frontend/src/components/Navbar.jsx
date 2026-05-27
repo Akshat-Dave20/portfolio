@@ -34,7 +34,7 @@ const Navbar = () => {
         <li><a href="#about" className="text-mono" style={{ fontSize: '0.9rem', transition: 'color 0.3s' }}>// About</a></li>
         <li><a href="#contact" className="text-mono" style={{ fontSize: '0.9rem', transition: 'color 0.3s' }}>// Contact</a></li>
       </ul>
-      <a href="/resume.pdf" download className="btn btn-primary text-mono shadow-neon" style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>
+      <a href="/resume.docx" download className="btn btn-primary text-mono shadow-neon" style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>
         &lt;Resume /&gt;
       </a>
     </nav>
