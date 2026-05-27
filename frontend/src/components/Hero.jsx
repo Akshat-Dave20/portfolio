@@ -39,7 +39,7 @@ const Hero = () => {
         <h1 className="hero-title">
           I'm <span className="hero-title-name text-neon-blue">Akshat Dave</span>
         </h1>
-        <h2 className="text-mono" style={{ fontSize: '1.5rem', color: 'var(--text-secondary)', height: '2rem' }}>
+        <h2 className="text-mono hero-subtitle">
           <span className="text-neon-green">&gt;</span> <span ref={typingRef}></span><span className="cursor-blink">|</span>
         </h2>
         
